@@ -146,7 +146,7 @@ export default {
       })
       .catch(error => {
         console.log(error)
-        this.errorMessages('y用户信息加载错误，请联系在线客服！', 5000)
+        this.errorMessages('用户信息加载错误，请联系在线客服！', 5000)
         // this.$router.push('/shouye')
       })
     Axios({

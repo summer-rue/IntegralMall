@@ -14,31 +14,27 @@
 <script>
 export default {
   props: ['for-child-msg'],
-  data () {
-    return { 
+  onBackPress (options) {
+    if (options.from === 'navigateBack') {
+      return false
     }
-  },
-  onBackPress(options) {
-  	if (options.from === 'navigateBack') {  
-  	  return false;  
-  	}  
-  	this.back();  
-  	return true;  
+    this.back()
+    return true
   },
   methods: {
     goBack () {
-      if (this.$route.path == '/order'){
+      if (this.$route.path === '/order') {
         console.log('返回首页')
         this.$router.push('/shouye')
       } else {
         this.$router.go(-1)
       }
     },
-	back() {  
-	  uni.navigateBack({  
-	    delta: 2  
-	  });  
-	}  
+    back () {
+      uni.navigateBack({
+        delta: 2
+      })
+    }
   }
 }
 </script>
