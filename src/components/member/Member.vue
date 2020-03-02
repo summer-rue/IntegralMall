@@ -289,6 +289,9 @@ export default {
 }
 </script>
 <style>
+#memberPage {
+  background-color: #151515
+}
 .red_bag_button {
   display: none;
 }
