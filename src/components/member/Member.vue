@@ -142,7 +142,6 @@ export default {
     })
       .then(Response => {
         this.auth = Response.data
-        console.log(Response.data, 2000)
       })
       .catch(error => {
         console.log(error)
@@ -175,7 +174,6 @@ export default {
       }
     })
       .then(Response => {
-        console.log(Response)
         this.Sign = Response.data.data
         this.total_sign_points = Response.data.total_points
         this.Sing_day = Response.data.continuity_days
